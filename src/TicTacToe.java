@@ -7,7 +7,7 @@ public class TicTacToe{
        WinConditions condition = new WinConditions();
        Scanner input = new Scanner(System.in);
         int player1row, player1column, player2row, player2column;
-        boolean isOver = false;
+        boolean isGameOver = false;
 
        do{
         do{
@@ -23,17 +23,17 @@ public class TicTacToe{
 
         if(board.GetmoveCount() >= 4){
             if(condition.WinbyColumn(1) == true){
-                isOver = true;
+                isGameOver = true;
             }else if(condition.WinbyDiagonal(1) == true){
-                isOver = true;
+                isGameOver = true;
             }else if(condition.WinbyRow(1) == true){
-                isOver = true;
+                isGameOver = true;
             }else if(condition.Draw() == true){
-                isOver = true;
+                isGameOver = true;
             }
         }
 
-        if(isOver != true){
+        if(isGameOver != true){
             do{
                 System.out.println("Player 2 turn");
                 board.PrintBoard();
@@ -46,17 +46,17 @@ public class TicTacToe{
 
             if(board.GetmoveCount() >= 4){
                 if(condition.WinbyColumn(2) == true){
-                    isOver = true;
+                    isGameOver = true;
                 }else if(condition.WinbyDiagonal(2) == true){
-                    isOver = true;
+                    isGameOver = true;
                 }else if(condition.WinbyRow(2) == true){
-                    isOver = true;
+                    isGameOver = true;
                 }else if(condition.Draw() == true){
-                    isOver = true;
+                    isGameOver = true;
                 }
             }
 
         }
-       }while (isOver == false);
+       }while (isGameOver == false);
     }
 }
