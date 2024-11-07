@@ -1,3 +1,4 @@
+package src;
 public class Board {
    final static int Row = 3;
    final static int Col = 3;
